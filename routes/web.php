@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes([
+    'verify' => true,
+    'reset' => true,
+]);
 
 Route::get('/', function () {
     return view('welcome');
