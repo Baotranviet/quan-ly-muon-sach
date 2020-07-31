@@ -83,4 +83,12 @@ class BookController extends Controller
         return redirect()->back()->with('update-book-success', 'Update Book Success');
     }
     
+    public function deleteMany(Request $request)
+    {
+        $arr_book_id = $request->input('id');
+        $book = Book::whereIn('id',$arr_book_id);
+        if ($book->delete()) {
+            echo "Deleted";
+        }
+    }
 }
