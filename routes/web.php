@@ -27,4 +27,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['namespace' => 'Web', 'middleware' => 'auth'], function() {
     Route::resource('book', 'BookController')->except(['show','destroy']);
     Route::get('del-many', 'BookController@deleteMany')->name('del-many');
+    Route::get('borrow', 'BorrowController@index')->name('borrow.index');
+    Route::get('borrower', 'BorrowerController@index')->name('borrower.index');
 });
