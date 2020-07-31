@@ -17,37 +17,31 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="book_table" class="table table-bordered table-hover">
+                                <table id="example2" class="table table-bordered table-hover">
                                     <thead>
-                                    <tr>
-                                        <th>
-                                            <button id="btn_delete" class="btn btn-danger btn-sm">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </th>
-                                        <th>Book Code</th>
-                                        <th>Book Name</th>
-                                        <th>Page Number</th>
-                                        <th>Quantity</th>
-                                        <th>Author</th>
-                                        <th>Options</th>
-                                    </tr>
+                                        <tr>
+                                            <th>Book Code</th>
+                                            <th>Book Name</th>
+                                            <th>Page Number</th>
+                                            <th>Quantity</th>
+                                            <th>Author</th>
+                                            <th>Options</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($books as $book)
-                                        <tr id="{{ $book->id }}">
-                                            <td><input type="checkbox" name="del-one[]" value="{{ $book->id }}"></td>
-                                            <td>{{ $book->book_code }}</td>
-                                            <td>{{ $book->book_name }}</td>
-                                            <td>{{ $book->page_number }}</td>
-                                            <td>{{ $book->quantity }}</td>
-                                            <td>{{ $book->author }}</td>
-                                            <td>
-                                                <a href="{{ route('book.edit',['book' => $book->id]) }}" class="btn btn-primary btn-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td>{{ $book->book_code }}</td>
+                                                <td>{{ $book->book_name }}</td>
+                                                <td>{{ $book->page_number }}</td>
+                                                <td>{{ $book->quantity }}</td>
+                                                <td>{{ $book->author }}</td>
+                                                <td>
+                                                    <a href="{{ route('book.edit',['book' => $book->id]) }}" class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
