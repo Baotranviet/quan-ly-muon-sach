@@ -24,7 +24,5 @@ $('#btn_delete').click(function () {
             });
         }
     }
-    else {    
-        
-    }
+
 });
