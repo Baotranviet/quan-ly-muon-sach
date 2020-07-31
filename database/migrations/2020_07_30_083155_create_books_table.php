@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateBooksTable extends Migration
 {
@@ -21,6 +22,7 @@ class CreateBooksTable extends Migration
             $table->string('author');
             $table->timestamps();
         });
+        DB::statement('ALTER Table books add id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;');
     }
 
     /**

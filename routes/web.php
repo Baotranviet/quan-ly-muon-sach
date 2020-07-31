@@ -22,12 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function() {
-    return view('admin');
-});
-Route::get('/test', function() {
-    return view('test');
-});
-
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['namespace' => 'Web', 'middleware' => 'auth'], function() {
+    Route::resource('book', 'BookController')->except(['show','destroy']);
+});

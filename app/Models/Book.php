@@ -10,7 +10,8 @@ class Book extends Model
         'book_code', 
         'book_name',
         'page_number',
-        'author'
+        'author',
+        'quantity'
     ];
 
     public function borrows()
