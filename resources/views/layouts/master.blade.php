@@ -6,6 +6,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   
   <script src="{{ asset('js/logout.js') }}" defer></script>
+  <script src="{{ asset('js/admin.js') }}" defer></script>
 
   <title>
       @yield('title-head')
