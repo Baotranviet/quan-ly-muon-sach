@@ -19,10 +19,7 @@ class BorrowController extends Controller
 
     public function fromDayToDay()
     {
-        if (isset($borrowers)) {
-            return view('borrowers.from_to_day', ['borrowers' => $borrowers]);
-        }
-        return view('borrowers.from_to_day');
+        return view('borrows.from_to_day');
     }
 
     public function getDay(Request $request)

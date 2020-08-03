@@ -76,13 +76,13 @@
                       <li class="nav-item">
                           <a href="{{ route('borrower.index') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>List 1</p>
+                              <p>List All</p>
                           </a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('borrower.today') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>List 2</p>
+                              <p>List Get Today</p>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -105,19 +105,13 @@
                       <li class="nav-item">
                         <a href="{{ route('borrow.index') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>List</p>
+                              <p>List All</p>
                           </a>
                       </li>
                       <li class="nav-item">
                           <a href="{{ route('borrow.from_to_day') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
                               <p>List day to day</p>
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">
-                            <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Level 3</p>
                           </a>
                       </li>
                   </ul>

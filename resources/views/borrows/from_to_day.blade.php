@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
-@section('title-head', 'List Borrower')
+@section('title-head', 'List Borrow')
 
 @section('content')
 
-    @include('partials.content_header', ['title' => 'Borrower', 'bread_crumb_1' => 'Borrower', 'bread_crumb_2' => 'List'])
+    @include('partials.content_header', ['title' => 'Borrow', 'bread_crumb_1' => 'Borrow', 'bread_crumb_2' => 'List'])
       <section class="content">
           <div class="container-fluid">
             <form id="formGetDay" action="{{ route('borrow.get_day') }}" method="POST" class="form-horizontal">
