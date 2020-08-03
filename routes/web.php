@@ -32,4 +32,5 @@ Route::group(['namespace' => 'Web', 'middleware' => 'auth'], function() {
     Route::post('borrow/get_day', 'BorrowController@getDay')->name('borrow.get_day');
     Route::get('borrower', 'BorrowerController@index')->name('borrower.index');
     Route::get('borrower/today', 'BorrowerController@getToDay')->name('borrower.today');
+    Route::get('borrower/not_refunded', 'BorrowerController@getNotRefunded')->name('borrower.not_refunded');
 });
