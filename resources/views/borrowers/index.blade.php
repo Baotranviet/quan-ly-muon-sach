@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">List Borrower</h3>
+                                <h3 class="card-title">Displays a list of all borrowers, along with the number of times a book has been borrowed.</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

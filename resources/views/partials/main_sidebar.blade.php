@@ -74,15 +74,15 @@
                   </a>
                   <ul class="nav nav-treeview">
                       <li class="nav-item">
-                          <a href="#" class="nav-link">
+                          <a href="{{ route('borrower.index') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Level 3</p>
+                              <p>List 1</p>
                           </a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Level 3</p>
+                              <p>List 2</p>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -109,9 +109,9 @@
                           </a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">
+                          <a href="{{ route('borrow.from_to_day') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Level 3</p>
+                              <p>List day to day</p>
                           </a>
                       </li>
                       <li class="nav-item">
