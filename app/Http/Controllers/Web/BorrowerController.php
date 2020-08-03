@@ -31,4 +31,14 @@ class BorrowerController extends Controller
         return view('borrowers.today', ['borrowers' => $borrowers]);
     }
 
+    public function getNotRefunded()
+    {
+        $borrowers = DB::table('borrowers')
+                        ->select('*')
+                        ->join('borrows', 'borrowers.card_number', '=', 'borrows.card_number')
+                        ->whereNull('pay_date')
+                        ->get();
+        
+        return view('borrowers.not-refunded', ['borrowers' => $borrowers]);
+    }
 }

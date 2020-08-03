@@ -86,9 +86,9 @@
                           </a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">
+                        <a href="{{ route('borrower.not_refunded') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Level 3</p>
+                              <p>List Not Refunded</p>
                           </a>
                       </li>
                   </ul>
