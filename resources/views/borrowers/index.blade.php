@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Displays a list of all borrowers, along with the number of times a book has been borrowed.</h3>
+                                <h3 class="card-title">List of all borrowers, along with the number of times a book has been borrowed.</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -41,14 +41,6 @@
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
-                <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                            {{-- {{ $borrowers->links() }} --}}
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </section>
     @endif

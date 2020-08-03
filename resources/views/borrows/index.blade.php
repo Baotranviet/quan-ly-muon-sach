@@ -12,14 +12,13 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Displays a list of people who borrowed books including the borrower's name, book's name, the date borrowed, and the date returned</h3>
+                                <h3 class="card-title">List of people who borrowed books</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="borrow_table" class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-
                                         <th>Borrower</th>
                                         <th>Book Name</th>
                                         <th>Borrow Date</th>
