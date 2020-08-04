@@ -41,7 +41,7 @@
                                             <td>{{ $book->book_name }}</td>
                                             <td>{{ $book->page_number }}</td>
                                             <td>{{ $book->quantity }}</td>
-                                            <td>{{ $book->author }}</td>
+                                            <td>{{ $book->author->name }}</td>
                                             <td>
                                                 <a href="{{ route('book.edit',['book' => $book->id]) }}" class="btn btn-primary btn-sm">
                                                     <i class="fas fa-edit"></i>

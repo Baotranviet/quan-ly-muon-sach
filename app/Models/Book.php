@@ -10,12 +10,17 @@ class Book extends Model
         'book_code', 
         'book_name',
         'page_number',
-        'author',
+        'author_id',
         'quantity'
     ];
 
     public function borrows()
     {
         return $this->hasMany(Borrow::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class, 'author_id');
     }
 }

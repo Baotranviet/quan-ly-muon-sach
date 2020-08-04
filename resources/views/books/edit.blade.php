@@ -55,7 +55,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Author</label>
-                                    <input type="text" name="author" class="form-control" value="{{ $book->author }}" placeholder="Enter Author">
+                                    <select class="custom-select" name="author_id">
+                                        <option></option>
+                                        @foreach ($authors as $author)
+                                            <option value="{{ $author->id }}" @if($author->id == $book->author_id) selected @endif >
+                                                {{ $author->name }}
+                                            </option>
+                                        @endforeach
+                                      </select>
                                 </div>
                             </div>
                             <!-- /.card-body -->

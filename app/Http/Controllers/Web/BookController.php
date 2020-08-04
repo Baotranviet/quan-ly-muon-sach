@@ -26,7 +26,7 @@ class BookController extends Controller
     public function index()
     {
         $paginate = config('setting.paginate');
-        $books = $this->bookRepo->paginate('created_at', 'DESC', $paginate);
+        $books = $this->bookRepo->with('author', $paginate);
 
         return view('books.index', ['books' => $books]);
     }
