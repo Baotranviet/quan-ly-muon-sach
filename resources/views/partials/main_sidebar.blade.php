@@ -74,16 +74,16 @@
                   </a>
                   <ul class="nav nav-treeview">
                       <li class="nav-item">
-                          <a href="{{ route('borrower.create') }}" class="nav-link">
-                            <i class="fas fa-angle-right nav-icon"></i>
-                              <p>Create Borrower</p>
-                          </a>
-                      </li>
-                      <li class="nav-item">
                           <a href="{{ route('borrower.index') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
                               <p>List All</p>
                           </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('borrower.create') }}" class="nav-link">
+                          <i class="fas fa-angle-right nav-icon"></i>
+                            <p>Create Borrower</p>
+                        </a>
                       </li>
                       <li class="nav-item">
                         <a href="{{ route('borrower.today') }}" class="nav-link">
@@ -93,6 +93,35 @@
                       </li>
                       <li class="nav-item">
                         <a href="{{ route('borrower.not_refunded') }}" class="nav-link">
+                            <i class="fas fa-angle-right nav-icon"></i>
+                              <p>List Not Refunded</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-circle"></i>
+                      <p>
+                          Borrower ORM
+                          <i class="right fas fa-angle-left"></i>
+                      </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          <a href="{{ route('borrower-orm.index') }}" class="nav-link">
+                            <i class="fas fa-angle-right nav-icon"></i>
+                              <p>List All</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('borrower-orm.today') }}" class="nav-link">
+                            <i class="fas fa-angle-right nav-icon"></i>
+                              <p>List Get Today</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('borrower-orm.not_refunded') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
                               <p>List Not Refunded</p>
                           </a>

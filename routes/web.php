@@ -36,4 +36,8 @@ Route::group(['namespace' => 'Web', 'middleware' => 'auth'], function() {
     Route::resource('borrower', 'BorrowerController')->only(['index','create','store']);
     Route::get('borrower/today', 'BorrowerController@getToDay')->name('borrower.today');
     Route::get('borrower/not_refunded', 'BorrowerController@getNotRefunded')->name('borrower.not_refunded');
+    /* borrower ORM*/
+    Route::resource('borrower-orm', 'BorrowerORMController')->only(['index']);
+    Route::get('borrower-orm/today', 'BorrowerORMController@getToDay')->name('borrower-orm.today');
+    Route::get('borrower-orm/not_refunded', 'BorrowerORMController@getNotRefunded')->name('borrower-orm.not_refunded');
 });
