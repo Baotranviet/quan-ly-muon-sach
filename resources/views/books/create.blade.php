@@ -27,43 +27,43 @@
                             </ul>
                         </div>
                     @endif
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Create a new book</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form role="form" id="quickForm" method="POST" action="{{ route('book.store') }}">
-                            @csrf
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label>Book Code</label>
-                                    <input type="text" name="book_code" class="form-control" placeholder="Enter Book Code">
-                                </div>
-                                <div class="form-group">
-                                    <label>Book Name</label>
-                                    <input type="text" name="book_name" class="form-control" placeholder="Enter Book Name">
-                                </div>
-                                <div class="form-group">
-                                    <label>Page Number</label>
-                                    <input type="number" name="page_number" class="form-control" placeholder="Enter Page Number">
-                                </div>
-                                <div class="form-group">
-                                    <label>Quantity</label>
-                                    <input type="number" name="quantity" class="form-control" placeholder="Enter Quantity">
-                                </div>
-                                <div class="form-group">
-                                    <label>Author</label>
-                                    <input type="text" name="author" class="form-control" placeholder="Enter Author">
-                                </div>
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Create</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /.card -->
+                    <form role="form" id="quickForm" method="POST" action="{{ route('book.store') }}">
+                        @csrf
+                        <table class="table" id="tableNewBook">
+                            <thead>
+                            <tr>
+                                <th>Book Code</th>
+                                <th>Book Name</th>
+                                <th>Page Number</th>
+                                <th>Quantity</th>
+                                <th>Author</th>
+                                <th class="text-center"><a id="addNewRow" title="Add new row" class="btn btn-primary btn-sm">+</a></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><input type="text" name="rows[0][book_code]" class="form-control" placeholder="Enter Book Code"></td>
+                                <td><input type="text" name="rows[0][book_name]" class="form-control" placeholder="Enter Book Name"></td>
+                                <td><input type="number" name="rows[0][page_number]" class="form-control" placeholder="Enter Page Number"></td>
+                                <td><input type="number" name="rows[0][quantity]" class="form-control" placeholder="Enter Quantity"></td>
+                                <td><input type="text" name="rows[0][author]" class="form-control" placeholder="Enter Author"></td>
+                                <td class="text-center"><a id="removeRow" title="Remove" class="btn btn-danger btn-sm">x</a></td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
                 </div>
                 <!--/.col (left) -->
                 <!-- right column -->

@@ -47,10 +47,21 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookStoreRequest $request)
+    public function store(Request $request)
     {
-        $book = $request->all();
-        $this->bookRepo->create($book);
+        $rows = $request->input('rows');
+
+        foreach ($rows as $row) {
+            $book = array (
+                'book_code' => $row['book_code'],
+                'book_name' => $row['book_name'],
+                'page_number' => $row['page_number'],
+                'quantity' => $row['quantity'],
+                'author' => $row['author'],
+            );
+            $this->bookRepo->create($book);
+        }
+
 
         return redirect()->back()->with('create-book-success', 'Create Book Success');
     }
