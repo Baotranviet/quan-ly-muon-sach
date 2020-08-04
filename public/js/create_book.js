@@ -11,7 +11,16 @@ function addNewRow()
                 '<td><input type="text" name="rows[' + i + '][book_name]" class="form-control" placeholder="Enter Book Name"></td>' +
                 '<td><input type="number" name="rows[' + i + '][page_number]" class="form-control" placeholder="Enter Page Number"></td>' +
                 '<td><input type="number" name="rows[' + i + '][quantity]" class="form-control" placeholder="Enter Quantity"></td>' +
-                '<td><input type="text" name="rows[' + i + '][author]" class="form-control" placeholder="Enter Author"></td>' +
+                '<td>' +
+                    '<select class="custom-select" name="rows[0][author_id]">'+
+                        '<option></option>'+
+                        '<?php @foreach ($authors as $author)'+
+                            '<option value="{{ $author->id }}">'+
+                                '{{ $author->name }}'+
+                            '</option>'+
+                        '@endforeach ?>'+
+                    '</select>'+
+                '</td>' +
                 '<td class="text-center"><a id="removeRow" title="Remove" class="btn btn-danger btn-sm">x</a></td>' +
             '</tr>';
     $('tbody').append(tr);
