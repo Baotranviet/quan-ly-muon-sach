@@ -8,6 +8,7 @@
   <script src="{{ asset('js/logout.js') }}" defer></script>
   <script src="{{ asset('js/admin.js') }}" defer></script>
   <script src="{{ asset('js/create_book.js') }}" defer></script>
+  <script src="{{ asset('js/edit_author.js') }}" defer></script>
 
   <title>
       @yield('title-head')
