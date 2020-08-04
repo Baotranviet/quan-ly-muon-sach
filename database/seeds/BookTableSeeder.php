@@ -19,7 +19,7 @@ class BookTableSeeder extends Seeder
                 'book_name' => $faker->text($maxNbChars = 50),
                 'page_number' => 111,
                 'quantity' => 20,
-                'author' => $faker->name
+                'author_id' => $i
             ]);
         }
     }

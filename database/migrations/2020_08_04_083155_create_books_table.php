@@ -19,7 +19,8 @@ class CreateBooksTable extends Migration
             $table->string('book_name');
             $table->integer('page_number');
             $table->integer('quantity');
-            $table->string('author');
+            $table->unsignedBigInteger('author_id');
+            $table->foreign('author_id')->references('id')->on('authors');
             $table->timestamps();
         });
         DB::statement('ALTER Table books add id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;');

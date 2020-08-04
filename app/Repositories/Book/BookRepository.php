@@ -12,4 +12,8 @@ class BookRepository extends BaseRepository implements BookRepositoryInterface
         return Book::class;
     }
     
+    public function with($model_related = [], $paginate)
+    {
+        return Book::with($model_related)->paginate($paginate);
+    }
 }
