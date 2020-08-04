@@ -15,7 +15,7 @@ class Borrower extends Model
     
     public function borrows()
     {
-        return $this->hasMany(Borrow::class);
+        return $this->hasMany(Borrow::class, 'card_number', 'card_number');
     }
 
 }
