@@ -40,4 +40,7 @@ Route::group(['namespace' => 'Web', 'middleware' => 'auth'], function() {
     Route::resource('borrower-orm', 'BorrowerORMController')->only(['index']);
     Route::get('borrower-orm/today', 'BorrowerORMController@getToDay')->name('borrower-orm.today');
     Route::get('borrower-orm/not_refunded', 'BorrowerORMController@getNotRefunded')->name('borrower-orm.not_refunded');
+    /* author */
+    Route::resource('author', 'AuthorController')->except(['show','destroy','edit']);
+    Route::get('delete-author', 'AuthorController@deleteAuthor')->name('author.delete');
 });
