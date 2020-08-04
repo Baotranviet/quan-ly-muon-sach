@@ -74,6 +74,12 @@
                   </a>
                   <ul class="nav nav-treeview">
                       <li class="nav-item">
+                          <a href="{{ route('borrower.create') }}" class="nav-link">
+                            <i class="fas fa-angle-right nav-icon"></i>
+                              <p>Create Borrower</p>
+                          </a>
+                      </li>
+                      <li class="nav-item">
                           <a href="{{ route('borrower.index') }}" class="nav-link">
                             <i class="fas fa-angle-right nav-icon"></i>
                               <p>List All</p>

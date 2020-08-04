@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Borrower;
+use App\Http\Requests\BorrowerStoreRequest;
 
 class BorrowerController extends Controller
 {
@@ -41,4 +43,18 @@ class BorrowerController extends Controller
         
         return view('borrowers.not-refunded', ['borrowers' => $borrowers]);
     }
+
+    public function create()
+    {
+        return view('borrowers.create');
+    }
+
+    public function store(BorrowerStoreRequest $request)
+    {
+        $borrower = $request->all();
+        Borrower::create($borrower);
+
+        return redirect()->back()->with('create-borrower-success', 'Create Borrower Success');
+    }
+
 }
