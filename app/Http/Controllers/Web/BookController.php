@@ -26,7 +26,7 @@ class BookController extends Controller
     public function index()
     {
         $paginate = config('setting.paginate');
-        $books = $this->bookRepo->with('author', $paginate);
+        $books = $this->bookRepo->with('author', 'id', 'DESC', $paginate);
 
         return view('books.index', ['books' => $books]);
     }
@@ -57,7 +57,7 @@ class BookController extends Controller
                 'book_name' => $row['book_name'],
                 'page_number' => $row['page_number'],
                 'quantity' => $row['quantity'],
-                'author' => $row['author'],
+                'author_id' => $row['author_id'],
             );
             $this->bookRepo->create($book);
         }

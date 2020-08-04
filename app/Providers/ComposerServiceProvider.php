@@ -24,7 +24,10 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            'books.edit',
+            [
+                'books.edit',
+                'books.create',
+            ],
             'App\Http\ViewComposers\AuthorComposer'
         );
     }
