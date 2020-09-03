@@ -25,6 +25,11 @@ $(document).ready(function () {
                 $('#editAuthorModal').modal('hide');
                 alert('Author Updated');
                 window.location.reload();
+                // $('tr#' + id + '').css('background-color', '#ccc');
+                // $('tr#' + id + '').fadeOut('slow');
+                // $('tr#' + id + 'td#name').val('');
+                // $('tr#' + id + '').css('background-color', '#fff');
+                // $('tr#' + id + '').fadeIn('slow');
             },
             error: function (error) {  
                 console.log(error);

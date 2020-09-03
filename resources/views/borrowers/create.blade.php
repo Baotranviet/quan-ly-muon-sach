@@ -31,19 +31,19 @@
                         @csrf
                         <div class="form-group">
                           <label>Card Number</label>
-                          <input type="text" class="form-control" name="card_number" placeholder="Enter Card Number">
+                          <input type="text" class="form-control" name="card_number" required placeholder="Enter Card Number">
                         </div>
                         <div class="form-group">
                           <label>Name</label>
-                          <input type="text" class="form-control" name="name"  placeholder="Enter Name">
+                          <input type="text" class="form-control" name="name"  required placeholder="Enter Name">
                         </div>
                         <div class="form-group">
                           <label>Day of Birth</label>
-                          <input type="date" class="form-control" name="day_of_birth"  placeholder="Enter Day of Birth">
+                          <input type="date" class="form-control" name="day_of_birth"  required placeholder="Enter Day of Birth">
                         </div>
                         <div class="form-group">
                           <label>Class</label>
-                          <input type="text" class="form-control" name="class"  placeholder="Enter Class">
+                          <input type="text" class="form-control" name="class"  required placeholder="Enter Class">
                         </div>
                         <div class="form-group text-right">
                             <button type="submit" class="btn btn-primary">Add Borrower</button>
